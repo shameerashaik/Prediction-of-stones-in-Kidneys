@@ -1,0 +1,22 @@
+
+  {% extends "home.html" %}
+    {% block content %}
+  <form action="{% url 'registration' %}" method="POST">
+        {% csrf_token %}
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100" style="
+    margin-top: 0px;
+    width: 965px;
+    padding-top: 0px;">
+      <h1 style="color:cyan;"><br>Register Here</h1>
+      <h3 style="color:cyan;">{{msg}}</h3>
+        <h3 style="color:cyan;">Enter Your Name</h3></i><input type="text" name="username" id="name" placeholder="Name" required>
+        <h3 style="color:cyan;">Enter Your Email</h3><input type="email" name="email1" placeholder="Email" required>
+        <h3 style="color:cyan;">Password</h3><input type="password" name="password" placeholder="Password" required>
+        <h3 style="color:cyan;">Confirm Password</h3><input type="password" name="cpassword" placeholder="Confirm Password" required>
+        <h3 style="color:cyan;">Mobile Number</h3><input type="tel" name="contact" patterns="[0-9]{10}" placeholder="Mobile"><br><br>
+        <input type="submit" value="submit">  
+    </div>
+  </section></form>
+  {% endblock %}
+  

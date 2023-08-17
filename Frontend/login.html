@@ -1,0 +1,29 @@
+
+    {% extends "home.html" %}
+    {% block content %}
+    <form action="{% url 'login' %}" method="POST">
+      {% csrf_token %}
+      
+        <div
+          class="container position-relative"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          style="margin-top: 0px; width: 965px; padding-top: 0px"
+        >
+          <h1 style="color: cyan"><br>Login Here</h1>
+          <h3 style="color: cyan">{{msg}}</h3>
+
+          <h3 style="color: cyan">Enter Your Email</h3>
+          <input type="email" name="email" placeholder="Email" />
+          <h3 style="color: cyan">Password</h3>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+          /><br /><br />
+          <input type="submit" value="submit" /><br />
+        </div>
+     
+    </form>
+    {% endblock %}
+   
